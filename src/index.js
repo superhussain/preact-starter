@@ -5,7 +5,7 @@ import './index.sass';
 let elem;
 let App;
 function init() {
-  App = require('./views').default; // eslint-disable-line global-require
+  App = require('./components').default; // eslint-disable-line global-require
   elem = render(App, document.getElementById('root'), elem);
 }
 
@@ -24,6 +24,6 @@ if (process.env.NODE_ENV === 'production') {
   require('preact/devtools'); // eslint-disable-line global-require
   // listen for HMR
   if (module.hot) {
-    module.hot.accept('./views', init);
+    module.hot.accept('./components', init);
   }
 }
