@@ -1,7 +1,7 @@
 const { join } = require('path');
 const ExtractText = require('extract-text-webpack-plugin');
 const babelOpts = require('./babel');
-const styles = require('./sass');
+const styles = require('./styles');
 const setup = require('./setup');
 
 const dist = join(__dirname, '..', 'dist');

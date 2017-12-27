@@ -13,7 +13,8 @@
   "dependencies": {
     "ganalytics": "^2.0.1",
     "preact": "^8.2.7",
-    "preact-router": "^2.6.0"
+    "preact-router": "^2.6.0",
+    "unistore": "^3.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.3",

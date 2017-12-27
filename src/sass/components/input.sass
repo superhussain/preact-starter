@@ -1,0 +1,29 @@
+.input
+  appearance: none
+  border: none
+  border-bottom: 3px solid #ddd
+  font-size: 1em
+  padding: 0.75em 0.25em
+  transition: 300ms ease-in-out
+  &:focus
+    outline: none
+    border-color: #bbb
+
+.input--primary
+  border-color: rgba($primary, .35)
+  &:focus
+    border-color: $primary
+
+.input__group
+  display: flex
+  flex-direction: column
+  text-align: left
+  max-width: 100%
+  margin: 3em auto 0
+  span
+    font-size: 0.85em
+    line-height: 1.5
+    text-transform: uppercase
+    color: lighten($black, 50%)
+    font-weight: 700
+    margin-left: 0.25 / 0.85 + em

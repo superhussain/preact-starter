@@ -1,15 +1,24 @@
-import { h } from 'preact'; // eslint-disable-line no-unused-vars
-import { Link } from 'preact-router';
+import { h } from 'preact' // eslint-disable-line no-unused-vars
+import { connect } from 'unistore/preact'
+import { Link } from 'preact-router'
+import actions from '../../store/actions'
 
-const Home = () => (
+import NameInput from '../NameInput'
+import Counter from '../Counter'
+
+const Home = (props) => (
   <div className="page page__home">
-    <h1>Welcome to Your Preact App</h1>
+    <h1>Hello {props.name || 'World'}!</h1>
+    <h2>&mdash; &nbsp; Welcome to Your Preact App &nbsp; &mdash;</h2>
 
     <div className="button__container">
       <Link href="/another-page" className="button button--big button--blue">Another Page</Link>
       <Link href="/blah" className="button button--big button--red">404 Page</Link>
     </div>
+
+    <NameInput width={400} />
+    <Counter width={400} />
   </div>
 )
 
-export default Home;
+export default connect((state) => state, actions)(Home)

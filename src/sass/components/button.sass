@@ -1,14 +1,14 @@
 .button__container
   display: block
   .button
-    margin: 0 0.5em
+    margin: 0.5em
 
 .button
   display: inline-block
   line-height: 1
   white-space: nowrap
   cursor: pointer
-  background: #fff
+  background-color: #fff
   border: 1px solid rgb(191, 203, 217)
   color: rgb(31, 45, 61)
   appearance: none
@@ -23,26 +23,59 @@
   font-size: 0.9em
   border-radius: 4px
   text-decoration: none
+  transition: 300ms ease-in-out
+  &:hover, &:focus
+    color: #20a0ff
+    border-color: #20a0ff
 
 .button--big
   font-size: 1.2em
 
+.button--small
+  font-size: 0.8em
+  padding: 0.7em
+
 .button--primary
-  background: $primary
-  border: 1px solid darken($primary, 5%)
+  background-color: $primary
+  border-color: darken($primary, 5%)
   color: $white
+  &:hover, &:focus
+    color: $white
+    background-color: darken($primary, 5%)
+    border-color: darken($primary, 5%)
 
 .button--blue
-  background: $blue
-  border: 1px solid darken($blue, 5%)
+  background-color: $blue
+  border-color: darken($blue, 5%)
   color: $white
+  &:hover, &:focus
+    color: $white
+    background-color: darken($blue, 5%)
+    border-color: darken($blue, 5%)
 
 .button--green
-  background: $green
-  border: 1px solid darken($green, 5%)
+  background-color: $green
+  border-color: darken($green, 5%)
   color: $white
+  &:hover, &:focus
+    color: $white
+    background-color: darken($green, 5%)
+    border-color: darken($green, 5%)
 
 .button--red
-  background: $red
-  border: 1px solid darken($red, 5%)
+  background-color: $red
+  border-color: darken($red, 5%)
   color: $white
+  &:hover, &:focus
+    color: $white
+    background-color: darken($red, 5%)
+    border-color: darken($red, 5%)
+
+.button--yellow
+  background-color: $yellow
+  border-color: darken($yellow, 5%)
+  color: $white
+  &:hover, &:focus
+    color: $white
+    background-color: darken($yellow, 5%)
+    border-color: darken($yellow, 5%)
