@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --env.production --config config/webpack",
+    "deploy": "npm run build && netlify deploy",
     "dev": "webpack-dev-server --config config/webpack",
     "lint": "./node_modules/.bin/eslint --ignore-pattern '/dist/' --ignore-pattern '/node_modules/' . & wait;",
     "start": "serve dist -s"
