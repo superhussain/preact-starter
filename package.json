@@ -1,0 +1,49 @@
+{
+  "name": "preact-starter",
+  "version": "0.0.1",
+  "description": "A Preact project",
+  "author": "Hussain Abbas <howdy@hussainabbas.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --env.production --config config/webpack",
+    "dev": "webpack-dev-server --config config/webpack",
+    "lint": "./node_modules/.bin/eslint --ignore-pattern '/dist/' --ignore-pattern '/node_modules/' . & wait;",
+    "start": "serve dist -s"
+  },
+  "dependencies": {
+    "ganalytics": "^2.0.1",
+    "preact": "^8.2.7",
+    "preact-router": "^2.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-babili": "^0.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.9",
+    "sass-loader": "^6.0.6",
+    "serve": "^6.4.3",
+    "style-loader": "^0.19.1",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
