@@ -6,7 +6,6 @@ export default function (state = defaultState, action) {
   switch (action.type) {
     case 'INCREMENT_COUNT': {
       const newState = state + 1
-      console.log(newState)
       return newState
     }
     case 'DECREMENT_COUNT': {

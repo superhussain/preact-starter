@@ -8,13 +8,13 @@ import thunkMiddleware from 'redux-thunk'
 import promise from 'redux-promise'
 import { createLogger } from 'redux-logger'
 
-import allReducers from '../reducers'
+import allReducers from './reducers'
 
-import Layout from './Layout'
+import Layout from './components/Layout'
 
-import Home from './Pages/Home'
-import AnotherPage from './Pages/AnotherPage'
-import Error404 from './Pages/errors/404'
+import Home from './components/Pages/Home'
+import AnotherPage from './components/Pages/AnotherPage'
+import Error404 from './components/Pages/errors/404'
 
 // track pages on route change
 const onChange = (obj) => window.ga && ga.send('pageview', { dp: obj.url })
