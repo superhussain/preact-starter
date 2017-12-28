@@ -1,7 +1,6 @@
 import { h } from 'preact' // eslint-disable-line no-unused-vars
-import { connect } from 'unistore/preact'
+import { connect } from 'preact-redux'
 import { Link } from 'preact-router'
-import actions from '../../store/actions'
 
 import NameInput from '../NameInput'
 import Counter from '../Counter'
@@ -21,4 +20,4 @@ const Home = (props) => (
   </div>
 )
 
-export default connect((state) => state, actions)(Home)
+export default connect((state) => state, {})(Home)
