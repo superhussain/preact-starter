@@ -9,7 +9,7 @@ const uglify = require('./uglify');
 
 const root = join(__dirname, '..');
 
-module.exports = isProd => {
+module.exports = (isProd) => {
 	// base plugins array
 	const plugins = [
 		new Clean(['dist'], { root }),
@@ -28,10 +28,11 @@ module.exports = isProd => {
 			new webpack.optimize.UglifyJsPlugin(uglify),
 			new ExtractText('styles.[hash].css'),
 			new SWPrecache({
+				cacheId: 'preact-starter',
 				minify: true,
 				filename: 'sw.js',
-				dontCacheBustUrlsMatching: /./,
-				navigateFallback: 'index.html',
+				dontCacheBustUrlsMatching: /\.\w{8}\./,
+				navigateFallback: '/index.html',
 				staticFileGlobsIgnorePatterns: [/\.map$/]
 			})
 		);
