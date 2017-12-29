@@ -18,6 +18,7 @@ import Layout from './components/Layout'
 
 import Home from './components/Pages/Home'
 import AnotherPage from './components/Pages/AnotherPage'
+import Contact from './components/Pages/Contact'
 import Error404 from './components/Pages/errors/404'
 
 // track pages on route change
@@ -58,6 +59,7 @@ export default (
         <Router onChange={ onChange }>
           <Home path="/" />
           <AnotherPage path="/another-page" />
+          <Contact path="/contact" />
           <Error404 default />
         </Router>
       </Layout>

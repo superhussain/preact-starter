@@ -1,13 +1,20 @@
 .input
   appearance: none
-  border: none
-  border-bottom: 3px solid #ddd
+  border: 1px solid #ddd
   font-size: 1em
-  padding: 0.75em 0.25em
+  padding: 0.5em
+  margin-top: 0.25em
+  border-radius: 4px
   transition: 300ms ease-in-out
   &:focus
     outline: none
     border-color: #bbb
+
+.input--underline
+  border: none
+  border-bottom: 3px solid #ddd
+  border-radius: 0
+  padding: 0.75em 0
 
 .input--primary
   border-color: rgba($primary, .35)
@@ -19,11 +26,13 @@
   flex-direction: column
   text-align: left
   max-width: 100%
-  margin: 3em auto 0
+  margin-top: 1.5em
+  &:first-of-type
+    margin-top: 0
   span
     font-size: 0.85em
     line-height: 1.5
     text-transform: uppercase
     color: lighten($black, 50%)
     font-weight: 700
-    margin-left: 0.25 / 0.85 + em
+    // margin-left: 0.25 / 0.85 + em

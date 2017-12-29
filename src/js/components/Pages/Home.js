@@ -11,7 +11,8 @@ const Home = (props) => (
     <h2>&mdash; &nbsp; Welcome to Your Preact App &nbsp; &mdash;</h2>
 
     <div className="button__container">
-      <Link href="/another-page" className="button button--big button--blue">Another Page</Link>
+      <Link href="/contact" className="button button--big button--blue">Contact</Link>
+      <Link href="/another-page" className="button button--big button--yellow">Another Page</Link>
       <Link href="/blah" className="button button--big button--red">404 Page</Link>
     </div>
 
