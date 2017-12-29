@@ -21,5 +21,19 @@ describe('Component: NameInput', () => {
     const context = shallow(<NameInput name="💩" />)
     expect(context.find('input')[0].attributes.value).toMatch(/💩/)
   })
-  // TODO: Create mock onInput function to test onInput event (change input value)
+  it('should correctly change name value onInput', () => {
+    let context
+    let name = ''
+
+    const mockChangeName = (newName) => { name = newName }
+
+    context = shallow(<NameInput name={name} changeName={mockChangeName} />)
+    expect(context.find('input')[0].attributes.value).toEqual('')
+
+    // reset count
+    context.find('input').simulate('input', { target: { value: '💩' } });
+
+    context = shallow(<NameInput name={name} changeName={mockChangeName} />)
+    expect(context.find('input')[0].attributes.value).toEqual('💩')
+  })
 })

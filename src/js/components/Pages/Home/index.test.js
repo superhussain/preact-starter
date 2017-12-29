@@ -21,4 +21,16 @@ describe('Component: Home', () => {
     const context = shallow(<Home name="💩" />)
     expect(context.find('h1').text()).toMatch(/Hello 💩!/)
   })
+  it('should expect name to change', () => {
+    let name = ''
+    let context
+
+    context = shallow(<Home name={name} />)
+    expect(context.find('h1').text()).toEqual('Hello World!')
+
+    name = '💩'
+
+    context = shallow(<Home name={name} />)
+    expect(context.find('h1').text()).toEqual('Hello 💩!')
+  })
 })

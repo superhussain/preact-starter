@@ -30,5 +30,62 @@ describe('Component: Counter', () => {
     const context = shallow(<Counter count={count} />)
     expect(context.find('h3').text()).toEqual((count === 0) ? 'Start by clicking increment...' : (count === 1) ? `Clicked ${count} time` : `Clicked ${count} times`)
   })
-  // TODO: Create mock increment, decrement and reset functions to test counter actions
+  it('should correctly increment count value on button click', () => {
+    let context
+    let count = 0
+
+    const mockIncrementCount = () => { count += 1 }
+
+    context = shallow(<Counter count={count} incrementCount={mockIncrementCount} />)
+    expect(context.find('h3').text()).toEqual('Start by clicking increment...')
+
+    // increment count
+    context.find('.button--green').simulate('click');
+
+    context = shallow(<Counter count={count} incrementCount={mockIncrementCount} />)
+    expect(context.find('h3').text()).toEqual('Clicked 1 time')
+
+    // increment count
+    context.find('.button--green').simulate('click');
+
+    context = shallow(<Counter count={count} incrementCount={mockIncrementCount} />)
+    expect(context.find('h3').text()).toEqual('Clicked 2 times')
+  })
+  it('should correctly decrement count value on button click', () => {
+    let context
+    let count = 2
+
+    const mockDecrementCount = () => { count -= 1 }
+
+    context = shallow(<Counter count={count} decrementCount={mockDecrementCount} />)
+    expect(context.find('h3').text()).toEqual('Clicked 2 times')
+
+    // decrement count
+    context.find('.button--yellow').simulate('click');
+
+    context = shallow(<Counter count={count} decrementCount={mockDecrementCount} />)
+    expect(context.find('h3').text()).toEqual('Clicked 1 time')
+
+    // decrement count
+    context.find('.button--yellow').simulate('click');
+
+    context = shallow(<Counter count={count} decrementCount={mockDecrementCount} />)
+    expect(context.find('h3').text()).toEqual('Start by clicking increment...')
+  })
+  it('should correctly reset count value on button click', () => {
+    let context
+    let count = 10
+
+    const mockResetCount = () => { count = 0 }
+
+    context = shallow(<Counter count={count} resetCount={mockResetCount} />)
+    expect(context.find('h3').text()).toEqual('Clicked 10 times')
+
+    // reset count
+    context.find('.button--red').simulate('click');
+
+    context = shallow(<Counter count={count} resetCount={mockResetCount} />)
+    expect(context.find('h3').text()).toEqual('Start by clicking increment...')
+  })
 })
+
