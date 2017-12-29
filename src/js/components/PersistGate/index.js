@@ -1,4 +1,5 @@
-import { h, Component } from 'preact'; // eslint-disable-line no-unused-vars
+/* eslint-disable */
+import { h, Component } from 'preact';
 
 export default class PersistGate extends Component {
   unsubscribe;

@@ -10,15 +10,24 @@
     "dev": "webpack-dev-server --config config/webpack",
     "lint": "./node_modules/.bin/eslint --ignore-pattern '/dist/' --ignore-pattern '/node_modules/' . & wait;",
     "redirect-file": "echo '/*    /index.html   200' > dist/_redirects",
-    "start": "serve dist -s"
+    "start": "serve dist -s",
+    "test": "./node_modules/.bin/jest"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|jpg|png)$": "<rootDir>/empty-module.js"
+    }
   },
   "dependencies": {
     "ganalytics": "^2.0.1",
+    "jest": "^22.0.4",
     "preact": "^8.2.7",
     "preact-redux": "^2.0.3",
+    "preact-render-spy": "^1.2.1",
     "preact-router": "^2.6.0",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.4.0",
     "redux-persist": "^5.4.0",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0"
@@ -31,6 +40,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-babili": "^0.1.4",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-preact": "^1.1.0",
     "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.3.1",

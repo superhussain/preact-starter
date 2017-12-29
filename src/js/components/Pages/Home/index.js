@@ -2,10 +2,10 @@ import { h } from 'preact' // eslint-disable-line no-unused-vars
 import { connect } from 'preact-redux'
 import { Link } from 'preact-router'
 
-import NameInput from '../NameInput'
-import Counter from '../Counter'
+import NameInput from '../../NameInput'
+import Counter from '../../Counter'
 
-const Home = (props) => (
+export const Home = (props) => (
   <div className="page page__home">
     <h1>Hello {props.name || 'World'}!</h1>
     <h2>&mdash; &nbsp; Welcome to Your Preact App &nbsp; &mdash;</h2>

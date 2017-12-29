@@ -2,7 +2,7 @@ import { h } from 'preact' // eslint-disable-line no-unused-vars
 import { connect } from 'preact-redux'
 import { changeName } from '../../actions'
 
-const NameInput = (props) => (
+export const NameInput = (props) => (
   <div className="card" style={(props.width) ? { width: props.width } : null}>
     <label className="input__group">
       <span>Name: </span>

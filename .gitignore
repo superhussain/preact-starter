@@ -1,8 +1,11 @@
 node_modules
-.DS_Store
-*.log
+
+coverage
 dist
-.sass-cache
-npm-debug.log
+
+.DS_Store
 .vscode
 .netlify
+.sass-cache
+npm-debug.log
+*.log

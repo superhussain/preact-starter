@@ -1,4 +1,4 @@
-import count from './counter'
+import count from './count'
 import name from './name'
 
 export default {

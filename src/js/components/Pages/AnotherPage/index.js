@@ -1,7 +1,7 @@
 import { h } from 'preact'; // eslint-disable-line no-unused-vars
 import { Link } from 'preact-router';
 
-const AnotherPage = () => (
+export const AnotherPage = () => (
   <div className="page page__another">
     <h1>Another Page</h1>
     <h2>&mdash; &nbsp; This is to demonstrate Preact Router &nbsp; &mdash;</h2>

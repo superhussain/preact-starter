@@ -1,7 +1,7 @@
 import { h } from 'preact'; // eslint-disable-line no-unused-vars
 import { Link } from 'preact-router';
 
-const Contact = () => (
+export const Contact = () => (
   <div className="page page__contact">
     <h1>Contact</h1>
     <h2>&mdash; &nbsp; Drop us a line below &nbsp; &mdash;</h2>

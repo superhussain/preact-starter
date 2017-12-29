@@ -2,7 +2,7 @@ import { h } from 'preact' // eslint-disable-line no-unused-vars
 import { connect } from 'preact-redux'
 import { incrementCount, decrementCount, resetCount } from '../../actions'
 
-const Counter = (props) => (
+export const Counter = (props) => (
   <div className="counter card" style={(props.width) ? { width: props.width } : null}>
     <h3>
       {(props.count === 0) && (<span>Start by clicking increment...</span>)}
