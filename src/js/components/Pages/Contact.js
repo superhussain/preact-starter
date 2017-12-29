@@ -4,6 +4,14 @@ import { Link } from 'preact-router';
 const Contact = () => (
   <div className="page page__contact">
     <h1>Contact</h1>
+    <h2>&mdash; &nbsp; Drop us a line below &nbsp; &mdash;</h2>
+
+    <div className="button__container">
+      <Link href="/" className="button button--green">Home</Link>
+      <Link href="/contact" className="button button--blue">Contact</Link>
+      <Link href="/another-page" className="button button--yellow">Another Page</Link>
+      <Link href="/blah" className="button button--red">404 Page</Link>
+    </div>
 
     <form className="card" style={{ width: 400 }} method="post">
       <input type="hidden" name="form-name" value="contactTest" />

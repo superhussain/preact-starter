@@ -1,4 +1,4 @@
-const defaultState = 'Hussain'
+const defaultState = ''
 
 export default function (state = defaultState, action) {
   if (!action || !action.type) return state

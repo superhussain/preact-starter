@@ -11,8 +11,16 @@
     a
       display: block
 
-  h1, h2, h3
-    margin: 1em 0
+  h1, h2, h3, h4, h5, h6
+    margin-bottom: 1em
+
+  h1
+    margin: 0
+  h2
+    font-size: 1.25em
+    margin: 0.5em 0 2em
+    font-weight: 300
+    color: rgba(lighten($black, 10%), .5)
 
   @media screen and (max-width: 321px)
     padding: $base-spacing $base-spacing/2
